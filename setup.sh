@@ -5,6 +5,9 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip > /dev/null
 sudo ./aws/install
 
+echo
+echo 
+
 # Create a Namespace
 kubectl create namespace devops-test
 
@@ -13,3 +16,5 @@ kubectl create deployment nginx --image=nginx --namespace=devops-test
 
 # Expose the Deployment as a Service
 kubectl expose deployment nginx --port=80 --type=NodePort --namespace=devops-test
+
+echo
